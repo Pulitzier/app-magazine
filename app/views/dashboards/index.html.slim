@@ -1,0 +1,18 @@
+.container
+	.child-container
+		.show-date
+			= form_tag('/show',
+				method: :get,
+				remote: true,
+				enforce_utf8: false,
+				# :'data-update-target' => 'update-container',
+				class: 'select_date')
+				do
+				= select_tag(:id, options_for_select(Dashboard.all.collect{|d| [d.update_date, d.id]}), {include_blank: true})
+
+				/ = collection_select(:id, :id, Dashboard.all, :id, :update_date, {:selected => @dashboards]})
+
+				= submit_tag('Show', name: nil)
+
+		table[id="update-container"]
+			 / = render @dashboard

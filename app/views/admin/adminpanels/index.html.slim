@@ -1,0 +1,9 @@
+.container
+	.child-container
+		.post-date
+			= form_tag('admin/adminpanels#create', method: :post, remote: true, class: 'update-date')
+				= text_field_tag(:frequency, nil, placeholder: 'frequency of update')
+				= text_field_tag(:date, nil, placeholder: 'date goes here')
+				= text_field_tag(:time, nil, placeholder: 'time goes here')
+				/! Seems like there should be a hidden_field_tag for adminpanell_id
+				.btn= button_to 'Update', { action: 'create' }
