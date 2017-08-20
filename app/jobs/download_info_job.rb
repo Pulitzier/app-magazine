@@ -1,6 +1,8 @@
-# class DownloadInfoJob < ApplicationJob
+class DownloadInfoJob < ApplicationJob
 # 	queue_as :default
  
-#   def perform()
-#   end
-# end
+  def self.perform
+  	puts 'i like to sleep'
+  	sleep 2
+  end
+end
