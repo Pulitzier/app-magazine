@@ -2,6 +2,7 @@ class Admin::AdminpanelsController < ApplicationController
 
 	def index
 		# @adminpanels = Adminpanel.all
+		call_rake :update_shop
 	end
 
 	def create

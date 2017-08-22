@@ -16,8 +16,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'slim-rails'
 gem 'redis', '~> 3.0'
-gem 'resque', require: 'resque/server'
-gem 'resque-scheduler'
+gem 'sidekiq'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'
